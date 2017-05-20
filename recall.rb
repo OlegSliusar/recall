@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'datamapper'
+require 'data_mapper'
 
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/recall.db")
 
@@ -8,8 +8,14 @@ class Note
   property :id, Serial
   property :content, Text, :required => true
   property :complete, Boolean, :required => true, :default => false
-  property :created_at, DataTime
-  property :updated_at, DataTime
+  property :created_at, DateTime
+  property :updated_at, DateTime
 end
 
 DataMapper.finalize.auto_upgrade!
+
+get '/' do
+  @notes = Note.all :order => :id.desc
+  @title = 'All Notes'
+  erb :home
+end
