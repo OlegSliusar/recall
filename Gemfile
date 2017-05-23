@@ -6,5 +6,6 @@ gem 'data_mapper'
 gem 'dm-sqlite-adapter', :group => :development
 gem 'dm-postgres-adapter', :group => :production
 gem 'pg', :group => :production
-
-#gem 'public_suffix', '1.0.0'
+gem 'builder'
+gem 'rack-flash'
+gem 'sinatra-redirect-with-flash'
