@@ -91,7 +91,6 @@ DEPENDENCIES
   sinatra (= 1.2.1)
   sinatra-flash
   sinatra-redirect-with-flash
-  tilt (>= 1.2.2, < 2.0)
 
 RUBY VERSION
    ruby 2.2.7p470
