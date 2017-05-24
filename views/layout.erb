@@ -16,13 +16,15 @@
   </header>
 
   <div id="main">
-    <% if flash[:notice] %>
-      <p class="notice"><%= flash[:notice] %>
-    <% end %>
+    <div id='flash'>
+      <% if flash[:notice] %>
+        <p class="notice"><%= flash[:notice] %>
+      <% end %>
 
-    <% if flash[:error] %>
-      <p class="error"><%= flash[:error] %>
-    <% end %>
+      <% if flash[:error] %>
+        <p class="error"><%= flash[:error] %>
+      <% end %>
+    </div>
 
     <%= yield %>
   </div>

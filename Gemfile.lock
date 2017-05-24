@@ -67,11 +67,11 @@ GEM
     pg (0.20.0)
     public_suffix (2.0.5)
     rack (1.6.8)
-    rack-flash (0.1.2)
-      rack
-    sinatra (1.2.6)
+    sinatra (1.2.1)
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sinatra-redirect-with-flash (0.2.1)
       sinatra (>= 1.0.0)
     stringex (1.5.1)
@@ -88,9 +88,10 @@ DEPENDENCIES
   dm-sqlite-adapter
   json (~> 1.6)
   pg
-  rack-flash
-  sinatra (= 1.2.6)
+  sinatra (= 1.2.1)
+  sinatra-flash
   sinatra-redirect-with-flash
+  tilt (>= 1.2.2, < 2.0)
 
 RUBY VERSION
    ruby 2.2.7p470
